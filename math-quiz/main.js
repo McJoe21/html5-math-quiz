@@ -1,28 +1,28 @@
 function submit() {
     var name = document.getElementById("name").value;
     var diff = document.getElementById("diff").value;
-    var email = document.getElementById("email").value;
+    //var email = document.getElementById("email").value;
 
-    if (name !== "" || email !== "") {
+    if (name !== "" && localStorage.getItem('set_name') !== nul/*|| email !== "" */){
     base = diff * 9;
     localStorage.setItem("name", name)
     localStorage.setItem("base", base)
 
-    window.location.assign('main.html')
+    window.location.assign('game.html')
   } else {
       alert("Please enter your name.")
   }
  }
 function index() {
-  document.getElementById("ver").innerHTML = "0.3.3-beta"}
+  document.getElementById("ver").innerHTML = "0.4.0"}
 function main() {
-    $q = 1; 
-    document.getElementById("q").innerHTML = $q
+    $question = 1; 
+    document.getElementById("q").innerHTML = $question
     $name = localStorage.getItem("name")
     $base = localStorage.getItem("base")
     if ($base !== 0) {
        new_sum();
-    } else {document.location.replace('index.html')}
+    } else {document.location.replace('menu.html')}
 }
 
 function type_num(num) {
@@ -70,13 +70,13 @@ function new_sum() {
 function check() {
 /* check answer */
     $a_edit = document.getElementById("a");
-    if ($a_edit.value == $answer) {
-        $q = $q + 1;
-        document.getElementById("q").innerHTML = $q;
+    if ($a_edit.value == $answer && $a_edit.value !== " ") {
+        $question = $question + 1;
+        document.getElementById("q").innerHTML = $question;
         $a_edit.value = ""
         new_sum();
     } else {
-        alert("Incorrect answer.")
-        window.location.replace('index.html')
+        alert("Incorrect answer. The correct answer was "+$answer)
+        window.location.replace('menu.html')
         }   
     }
