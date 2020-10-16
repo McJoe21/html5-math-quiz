@@ -5,7 +5,7 @@ input,
 select {
     width: 80%;
     padding: 5px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Ranchers', cursive;
     border-width: 5px;
     border-color: rgb(97, 93, 93);
@@ -45,7 +45,7 @@ button {
 }
 td {width: 50px;}
 label {font-weight: bold;font-family: 'Grandstander', cursive;color:red;font-size: 24;}
-#sum {font-size: 45px;font-family: 'Grandstander', cursive;}
+#sum {font-size: 50px;font-family: 'Grandstander', cursive;}
 label#title {font-size:35px;}
 
 p#info, p#info a {
