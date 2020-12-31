@@ -30,7 +30,7 @@ function main() {
     $base = localStorage.getItem("base")
     if ($base !== 0) {
        new_sum();
-    } else {document.location.replace('index.html')}
+    } else {document.location.replace('menu.html')}
 }
 
 function type_num(num) {
@@ -85,6 +85,6 @@ function check() {
         new_sum();
     } else {
         alert("Incorrect answer.")
-        window.location.replace('index.html')
+        window.location.replace('menu.html')
         }   
     }
